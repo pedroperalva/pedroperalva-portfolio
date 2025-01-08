@@ -1,3 +1,97 @@
+import { Skills } from "@/components/skills";
+import Image from "next/image";
+import {
+  SiHtml5,
+  SiCss3,
+  SiVuedotjs,
+  SiNextdotjs,
+  SiTypescript,
+  SiReact,
+  SiJavascript,
+  SiTailwindcss,
+  SiChakraui,
+  SiBootstrap,
+  SiMui,
+  SiJest,
+  SiNodedotjs,
+  SiNestjs,
+  SiPrisma,
+  SiMysql,
+  SiPostgresql,
+  SiRedux,
+} from "react-icons/si";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+
 export default function Home() {
-  return <div className=""></div>;
+  return (
+    <div className="px-20 flex flex-col gap-20">
+      <section className="flex items-center justify-around h-[calc(100vh-100px)] w-full relative">
+        <div className="max-w-[700px]">
+          <h1 className="text-3xl font-bold text-white fade-in delay-1">
+            Pedro Peralva
+          </h1>
+          <h1 className="text-3xl font-bold text-primary fade-in delay-2">
+            Software Engineer
+          </h1>
+          <p className="text-md text-white fade-in delay-3">
+            Tenho 3 anos de experiência desenvolvendo aplicações full-stack com
+            maior experiência em front-end.
+            <br />
+            Desenvolvo aplicações utilizando Next, React, Vue, Typescript e
+            Javascript.
+            <br />
+            Domino ferramentas de gerenciamento de estados globais como Context,
+            Redux, Vuex, bibliotecas de CSS como Tailwind, Bootstrap, Vuetify,
+            ChakraUI, Styled Components, MaterialUI e testes automatizados com
+            React Testing Library e Jest.
+            <br />
+            No Back-End tenho experiência com desenvolvimento de apis utilizando
+            Nodejs, Nestjs, Prisma e qualquer banco SQL.
+          </p>
+        </div>
+        <div className="image-container fade-in delay-1">
+          <div className="image-wrapper">
+            <Image
+              src="/eu.jpg"
+              alt="Pedro Peralva"
+              width={300}
+              height={300}
+              className="profile-image"
+            />
+          </div>
+        </div>
+        <a href="#skills" className="absolute left-[50%] bottom-1">
+          <MdKeyboardDoubleArrowDown
+            className="text-primary cursor-pointer animate-bounce"
+            size={40}
+          />
+        </a>
+      </section>
+      <section id="skills" className="fade-in w-full">
+        <h1 className="text-3xl font-bold text-primary text-center my-20">
+          Skills
+        </h1>
+        <div className="flex flex-wrap items-center gap-4 fade-in">
+          <Skills icon={<SiHtml5 size={26} />} text="HTML" />
+          <Skills icon={<SiCss3 size={26} />} text="CSS" />
+          <Skills icon={<SiJavascript size={26} />} text="JAVASCRIPT" />
+          <Skills icon={<SiTypescript size={26} />} text="TYPESCRIPT" />
+          <Skills icon={<SiReact size={26} />} text="REACT" />
+          <Skills icon={<SiNextdotjs size={26} />} text="NEXT" />
+          <Skills icon={<SiVuedotjs size={26} />} text="VUE" />
+          <Skills icon={<SiTailwindcss size={26} />} text="TAILWIND" />
+          <Skills icon={<SiChakraui size={26} />} text="CHAKRA UI" />
+          <Skills icon={<SiBootstrap size={26} />} text="BOOTSTRAP" />
+          <Skills icon={<SiMui size={26} />} text="MATERIAL UI" />
+          <Skills icon={<SiRedux size={26} />} text="REDUX" />
+          <Skills icon={<SiJest size={26} />} text="JEST" />
+          <Skills icon={<SiNodedotjs size={26} />} text="NODE" />
+          <Skills icon={<SiNestjs size={26} />} text="NEST" />
+          <Skills icon={<SiPrisma size={26} />} text="PRISMA" />
+          <Skills icon={<SiMysql size={26} />} text="MYSQL" />
+          <Skills icon={<SiPostgresql size={26} />} text="POSTGRESQL" />
+        </div>
+      </section>
+    </div>
+  );
 }

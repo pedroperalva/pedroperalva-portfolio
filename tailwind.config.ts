@@ -11,6 +11,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "var(--primary)",
+      },
+      maxWidth: {
+        lg: "1024px",
+      },
+      width: {
+        lg: "1024px",
       },
     },
   },
