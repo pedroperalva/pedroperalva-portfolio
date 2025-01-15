@@ -1,3 +1,5 @@
+"use client";
+
 import { Skills } from "@/components/skills";
 import Image from "next/image";
 import {
@@ -21,16 +23,18 @@ import {
   SiRedux,
 } from "react-icons/si";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import { ProjectCard } from "@/components/projectCard";
+import { SideSocialBar } from "@/components/sideSocialBar";
+import { ContactForm } from "@/components/contactForm";
 
 export default function Home() {
   return (
-    <div className="px-20 flex flex-col gap-20">
-      <section className="flex items-center justify-around h-[calc(100vh-100px)] w-full relative">
+    <div className="px-20 flex flex-col font-quicksand pb-20">
+      <SideSocialBar />
+      <section className="flex items-center justify-around h-[calc(100vh-150px)] w-full relative">
         <div className="max-w-[700px]">
-          <h1 className="text-3xl font-bold text-white fade-in delay-1">
-            Pedro Peralva
-          </h1>
-          <h1 className="text-3xl font-bold text-primary fade-in delay-2">
+          <h1 className="text-3xl text-white fade-in delay-1">Pedro Peralva</h1>
+          <h1 className="text-3xl text-primary fade-in delay-2">
             Software Engineer
           </h1>
           <p className="text-md text-white fade-in delay-3">
@@ -60,7 +64,9 @@ export default function Home() {
             />
           </div>
         </div>
-        <a href="#skills" className="absolute left-[50%] bottom-1">
+      </section>
+      <section className="h-[50px] w-full flex justify-center">
+        <a href="#skills">
           <MdKeyboardDoubleArrowDown
             className="text-primary cursor-pointer animate-bounce"
             size={40}
@@ -68,10 +74,8 @@ export default function Home() {
         </a>
       </section>
       <section id="skills" className="fade-in w-full">
-        <h1 className="text-3xl font-bold text-primary text-center my-20">
-          Skills
-        </h1>
-        <div className="flex flex-wrap items-center gap-4 fade-in">
+        <h1 className="text-4xl text-primary text-center my-20">Skills</h1>
+        <div className="flex flex-wrap items-center justify-center gap-4 fade-in">
           <Skills icon={<SiHtml5 size={26} />} text="HTML" />
           <Skills icon={<SiCss3 size={26} />} text="CSS" />
           <Skills icon={<SiJavascript size={26} />} text="JAVASCRIPT" />
@@ -90,6 +94,16 @@ export default function Home() {
           <Skills icon={<SiPrisma size={26} />} text="PRISMA" />
           <Skills icon={<SiMysql size={26} />} text="MYSQL" />
           <Skills icon={<SiPostgresql size={26} />} text="POSTGRESQL" />
+        </div>
+      </section>
+      <section id="skills" className="fade-in w-full">
+        <h1 className="text-4xl text-primary text-center my-20">Projetos</h1>
+        <ProjectCard />
+      </section>
+      <section id="contact" className="fade-in w-full">
+        <h1 className="text-4xl text-primary text-center my-20">Contato</h1>
+        <div className="flex justify-center">
+          <ContactForm />
         </div>
       </section>
     </div>
