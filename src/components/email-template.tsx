@@ -11,11 +11,7 @@ export const EmailTemplate = ({
   name,
   email,
   message,
-}: {
-  name: string;
-  email: string;
-  message: string;
-}): ReactNode => (
+}: EmailTemplateProps): ReactNode => (
   <div>
     <p>
       <strong>Name:</strong> {name}

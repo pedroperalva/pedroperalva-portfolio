@@ -31,8 +31,8 @@ export default function Home() {
   return (
     <div className="px-20 flex flex-col font-quicksand pb-20">
       <SideSocialBar />
-      <section className="flex items-center justify-around h-[calc(100vh-150px)] w-full relative">
-        <div className="max-w-[700px]">
+      <section className="flex xl:flex-row flex-col-reverse items-center justify-around xl:h-[calc(100vh-150px)] w-full relative mt-20 xl:mt-0">
+        <div className="max-w-[700px] mt-20 xl:mt-0">
           <h1 className="text-3xl text-white fade-in delay-1">Pedro Peralva</h1>
           <h1 className="text-3xl text-primary fade-in delay-2">
             Software Engineer
@@ -56,16 +56,16 @@ export default function Home() {
         <div className="image-container fade-in delay-1">
           <div className="image-wrapper">
             <Image
-              src="/eu.jpg"
+              src="/eu.png"
               alt="Pedro Peralva"
-              width={300}
-              height={300}
+              width={400}
+              height={400}
               className="profile-image"
             />
           </div>
         </div>
       </section>
-      <section className="h-[50px] w-full flex justify-center">
+      <section className="h-[50px] w-full xl:flex justify-center hidden">
         <a href="#skills">
           <MdKeyboardDoubleArrowDown
             className="text-primary cursor-pointer animate-bounce"

@@ -19,6 +19,9 @@ export default {
       width: {
         lg: "1024px",
       },
+      boxShadow: {
+        project: "0px 0px 10px 10px",
+      },
     },
   },
   plugins: [],

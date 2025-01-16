@@ -1,16 +1,17 @@
 "use client";
 
 import { Button, Input, Textarea } from "@chakra-ui/react";
+import { FormEvent } from "react";
 
 export function ContactForm() {
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const data = {
-      name: event.target[0].value,
-      email: event.target[1].value,
-      subject: event.target[2].value,
-      message: event.target[3].value,
+      name: (event.currentTarget[0] as HTMLInputElement).value,
+      email: (event.currentTarget[1] as HTMLInputElement).value,
+      subject: (event.currentTarget[2] as HTMLInputElement).value,
+      message: (event.currentTarget[3] as HTMLInputElement).value,
     };
 
     const response = await fetch("/api/send", {
@@ -31,7 +32,7 @@ export function ContactForm() {
   return (
     <form
       className="flex flex-col gap-4 w-[500px]"
-      onSubmit={(e) => handleSubmit(e)}
+      onSubmit={(e: FormEvent<HTMLFormElement>) => handleSubmit(e)}
     >
       <Input
         type="text"

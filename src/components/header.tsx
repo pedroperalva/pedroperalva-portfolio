@@ -1,5 +1,4 @@
 import { Button } from "@chakra-ui/react";
-// import { FaLinkedin, FaWhatsapp, FaGithub } from "react-icons/fa";
 
 export function Header() {
   return (
@@ -7,7 +6,7 @@ export function Header() {
       className="p-4 text-primary w-full h-[100px] flex items-center justify-center"
       id="main"
     >
-      <nav className="flex justify-between max-w-lg w-lg justify-self-center">
+      <nav className="flex justify-between max-w-lg w-lg justify-self-center fade-in delay-1">
         <h1 className="text-2xl font-semibold animate-pulse">Pedro Peralva</h1>
         <div className="flex items-center gap-10">
           <ul className="flex items-center gap-10 ">

@@ -2,8 +2,8 @@ import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 
 export function Footer() {
   return (
-    <footer className="h-[100px] w-full flex flex-col items-center justify-center">
-      <a href="#main">
+    <footer className="h-[100px] w-full flex flex-col items-center justify-center ">
+      <a href="#main" className="hidden xl:block">
         <MdKeyboardDoubleArrowUp
           className="text-primary cursor-pointer animate-bounce"
           size={40}
