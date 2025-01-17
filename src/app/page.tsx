@@ -29,7 +29,7 @@ import { ContactForm } from "@/components/contactForm";
 
 export default function Home() {
   return (
-    <div className="px-20 flex flex-col font-quicksand pb-20">
+    <div className="px-6 md:px-10 xl:px-20 flex flex-col font-quicksand pb-20">
       <SideSocialBar />
       <section className="flex xl:flex-row flex-col-reverse items-center justify-around xl:h-[calc(100vh-150px)] w-full relative mt-20 xl:mt-0">
         <div className="max-w-[700px] mt-20 xl:mt-0">
@@ -98,7 +98,24 @@ export default function Home() {
       </section>
       <section id="skills" className="fade-in w-full">
         <h1 className="text-4xl text-primary text-center my-20">Projetos</h1>
-        <ProjectCard />
+        <ProjectCard
+          title="MovieFlix"
+          description="Projeto utilizando a biblioteca TMDB de filmes e séries. O intuito
+            do projeto é utilizar algumas funções serverless do Nextjs e fazer
+            uma plataforma com cadastro e login de usuários com Nestjs, onde
+            poderão ser falvos os filmes, séries e atores favoritos, além de ver
+            detalhes sobre os títulos."
+          techs={[
+            SiTypescript,
+            SiNextdotjs,
+            SiTailwindcss,
+            SiChakraui,
+            SiNestjs,
+            SiPrisma,
+          ]}
+          liveLink=""
+          codeLink="https://github.com/pedroperalva/pedroperalva-portfolio"
+        />
       </section>
       <section id="contact" className="fade-in w-full">
         <h1 className="text-4xl text-primary text-center my-20">Contato</h1>
