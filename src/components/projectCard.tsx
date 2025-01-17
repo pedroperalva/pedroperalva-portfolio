@@ -1,15 +1,6 @@
-import {
-  SiChakraui,
-  SiNestjs,
-  SiNextdotjs,
-  SiPrisma,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si";
 import { BiLinkExternal } from "react-icons/bi";
-import { Button, Icon, Link } from "@chakra-ui/react";
+import { Icon, Link } from "@chakra-ui/react";
 import { IconType } from "react-icons";
-import { ReactElement } from "react";
 
 export function ProjectCard({
   title,
