@@ -15,7 +15,6 @@ import { ProjectCard } from "@/components/projectCard";
 import { SideSocialBar } from "@/components/sideSocialBar";
 import { ContactForm } from "@/components/contactForm";
 import { skillsList } from "./utils/skillList";
-import { FaReact } from "react-icons/fa6";
 import { ReactIcon } from "@/components/reactIcon";
 
 export default function Home() {
