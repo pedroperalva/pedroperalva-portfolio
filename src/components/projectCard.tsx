@@ -8,17 +8,19 @@ export function ProjectCard({
   techs,
   codeLink,
   liveLink,
+  thumb,
 }: {
   title: string;
   description: string;
   techs: IconType[];
   codeLink: string;
   liveLink: string;
+  thumb: string;
 }) {
   return (
     <div className="flex xl:max-h-[300px] xl:flex-row flex-col items-center xl:items-start gap-6 xl:gap-0">
       <img
-        src="/projects/movieflix.jpg"
+        src={thumb}
         alt="movie-flix"
         className="xl:w-[500px] xl:h-[300px] xl:mr-8 shadow-project shadow-primary md:max-w-[500px]"
       />
